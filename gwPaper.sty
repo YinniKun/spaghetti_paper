@@ -1,0 +1,191 @@
+\ProvidesPackage{gwPaper}
+\PassOptionsToPackage{dvipsnames,table}{xcolor}
+
+\usepackage[citestyle=nature,bibstyle=nature,date=year,giveninits=true,sorting=none,url=false,doi=false,isbn=false,eprint=false,maxbibnames=5]{biblatex}
+\usepackage[normalem]{ulem}
+\usepackage[scaled]{helvet}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{suffix}
+\usepackage{framed}
+\usepackage{authblk}
+\usepackage{capt-of}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{fullpage}
+\usepackage{geometry}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{soul} % Highlight using \hl{}
+\usepackage{grffile}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{lineno}
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{xurl}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{siunitx}
+%\usepackage{stix}
+\usepackage{subcaption}
+\usepackage{svg}
+\usepackage[most]{tcolorbox}
+\usepackage{textcomp}
+\usepackage{unicode-math}
+\usepackage{wrapfig}
+\usepackage{clipboard}
+\usepackage[capitalize]{cleveref}
+\usepackage{luacolor} % Required to use the lua-ul \highLight command 
+\usepackage{lua-ul}
+\usepackage{makecell}  % For Xhline width
+\LuaULSetHighLightColor{Apricot}
+\newclipboard{paper}
+
+\newcommand{\qc}[2]{\label{txt:#1}\Copy{q:#1}{#2}}
+
+\newcommand{\qp}[1]{%
+\begin{tcolorbox}[title=\Cpageref{txt:#1}, breakable, enhanced, colback=white, colframe = black!50!white]
+  \Paste{q:#1}
+\end{tcolorbox}\vspace{\baselineskip}
+}
+
+\newcommand{\qps}[1]{%
+\begin{tcolorbox}[title=Supplementary \Cpageref{txt:#1}, breakable, enhanced, colback=white, colframe = black!50!white]
+  \Paste{q:#1}
+\end{tcolorbox}\vspace{\baselineskip}
+}
+
+% Fonts \setmathfont{Noto Sans Math}
+\setmainfont{Arial}
+\setmathfont{Arial}
+\usepackage[italic]{mathastext}
+% \setmathfont{STIX Two Math} \setmainfont{Times New Roman}
+
+\usepackage{newunicodechar}
+\newfontfamily{\fallbackfont}{STIX Two Math}[Scale=MatchLowercase]
+\DeclareTextFontCommand{\textfallback}{\fallbackfont}
+\newunicodechar{⬒}{\textfallback{⬒}}
+
+\setlength{\footskip}{3cm}  % Position of page numbers
+
+% wrapfig above space
+\setlength\intextsep{0pt}
+
+% Colors
+\colorlet{lightlightgray}{black!10!white}
+
+% SIUnit
+\sisetup{detect-all}
+\sisetup{mode = text}
+\sisetup{group-separator = {,}, group-minimum-digits = 4, group-digits = integer}
+\DeclareSIUnit\molar{\textsc{m}}
+\DeclareSIUnit\BP{bp}
+\DeclareSIUnit\cells{cells}
+\DeclareSIUnit\celltypes{cell types}
+\DeclareSIUnit\sample{sample}
+\DeclareSIUnit\samples{samples}
+\DeclareSIUnit\admixtures{admixtures}
+\DeclareSIUnit\pixel{px}
+\DeclareSIUnit\year{year}
+\DeclareSIUnit\years{years}
+\DeclareSIUnit\spot{spot}
+\DeclareSIUnit\spots{spots}
+
+% Supplemental
+
+% For supplementary figures
+\newfloat{sfigure}{tbp}{ext}
+\floatname{sfigure}{Supplementary Figure}
+\renewcommand{\thesfigure}{S\arabic{sfigure}}
+\DeclareCaptionSubType{sfigure}  % For subcaptions with a subfigure
+
+% For supplementary tables
+\newfloat{stab}{tbp}{ext}
+\floatname{stab}{Supplementary Table}
+\renewcommand{\thestab}{S\arabic{stab}}
+\DeclareCaptionSubType{stab}  % For subcaptions with a subfigure
+
+% For supplementary notes
+\newcounter{snoteno}
+\newcommand{\snote}[1]{\refstepcounter{snoteno}\label{#1}}
+\renewcommand{\thesnoteno}{S\arabic{snoteno}}
+
+% For rebuttal figures
+\newfloat{rfigure}{tbp}{ext}
+\floatname{rfigure}{Response Figure}
+\renewcommand{\therfigure}{R\arabic{rfigure}}
+\DeclareCaptionSubType{rfigure}  % For subcaptions with a subfigure
+
+% For rebuttal tables
+\newfloat{rtab}{tbp}{ext}
+\floatname{rtab}{Response Table}
+\renewcommand{\thertab}{R\arabic{rtab}}
+\DeclareCaptionSubType{rtab}  % For subcaptions with a subfigure
+
+\Crefname{snoteno}{Supplementary Note}{Supplementary Notes}
+\Crefname{stab}{Supplementary Table}{Supplementary Tables}
+\Crefname{substab}{Supplementary Table}{Supplementary Tables}
+\Crefname{sfigure}{Supplementary Figure}{Supplementary Figures}
+\Crefname{subsfigure}{Supplementary Figure}{Supplementary Figures}
+\Crefname{rfigure}{Response Figure}{Response Figures}
+\Crefname{subrfigure}{Response Figure}{Response Figures}
+\Crefname{rtab}{Response Table}{Response Tables}
+\Crefname{subrtab}{Response Table}{Response Tables}
+
+\newcommand{\crefrangeconjunction}{-}
+
+% For ranges in Cref
+\newcommand{\enableLabelRanges}[1]{%
+\crefrangelabelformat{#1}{##3##1\xdef\mycreffirstarg{##1}##4\textmd{--}%
+##5\crefstripprefix{##1}{##2}##6}
+\crefmultiformat{#1}{figs.~##2##1\xdef\mycreffirstarg{##1}##3}%
+{ and~##2{\crefstripprefix{\mycreffirstarg}{##1}}##3}%
+{, ##2{\crefstripprefix{\mycreffirstarg}{##1}}##3}%
+{ and~##2{\crefstripprefix{\mycreffirstarg}{##1}}##3}
+\crefrangemultiformat{#1}{figs.~##3##1##4--##5\crefstripprefix{##1}{##2}##6}%
+{ and~##3##1##4--##5\crefstripprefix{##1}{##2}##6}%
+{, ##3##1##4--##5\crefstripprefix{##1}{##2}##6}%
+{ and~##3##1##4--##5\crefstripprefix{##1}{##2}##6}
+}
+
+% For panels
+\makeatletter
+\@ifpackageloaded{subcaption}{%
+\renewcommand*\subcaption@@label[2]{%
+  \@bsphack\begingroup
+    \subcaption@ORI@label#1{#2}%
+    \let\SK@\@gobbletwo
+    \protected@edef\@currentlabel{\csname thesub\@captype\endcsname}%
+    \protected@edef\cref@currentlabel{%
+      [sub\@captype][\arabic{sub\@captype}][\cref@result]%
+      \csname thesub\@captype\endcsname}%
+    \subcaption@ORI@label#1{sub@#2}%
+  \endgroup\@esphack}%
+}
+\makeatother
+
+\enableLabelRanges{subfigure}
+\enableLabelRanges{subsfigure}
+\enableLabelRanges{substab}
+\enableLabelRanges{subrfigure}
+\enableLabelRanges{subrtab}
+
+% Specifically for panel labels in figures.
+\labelcrefmultiformat{subfigure}{#2#1#3}{\textmd{,}~#2#1#3}{\textmd{,} #2#1#3}{ \textmd{--}~#2#1#3}
+\labelcrefmultiformat{subsfigure}{#2#1#3}{\textmd{,}~#2#1#3}{\textmd{,} #2#1#3}{ \textmd{--}~#2#1#3}
+
+% Easy command for panel lettering.
+\newcommand{\panel}[1]{\textbf{\labelcref{#1}}}
+
+% For rebuttal labeling
+\newcommand{\rlabel}[1]{\addtocounter{subsection}{-1}\refstepcounter{subsection}\label{#1}}
+
+%Clipboard info
+\openclipboard{paper}
+

@@ -1,0 +1,21 @@
+\documentclass[dvipsnames,hidelinks,11pt]{article}
+
+\usepackage{gwPaper}
+
+% References
+% \DeclareFieldFormat[article]{volume}{\normalfont{#1}}  % No bold volume
+\addbibresource{references.bib}
+% No notes
+\AtEveryBibitem{%
+  \clearfield{note}%
+}
+
+\begin{document}
+
+\input{paper}
+
+% \clearpage
+
+% \input{rebuttal/rebuttal}
+
+\end{document}

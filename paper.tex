@@ -1,0 +1,270 @@
+
+% Title page
+\date{}
+\title{SPAGHETTI Optimizes the Quantitative Analysis of \textit{In Vitro} Phase Contrast Miscroscopy through a Generative Deep Learning Model}
+\author[1-3]{Zhi Fei (Richard) Dong}
+\author[1-3]{Chris McIntosh}
+\author[1-3]{Gregory W. Schwartz}
+\affil[1]{Princess Margaret Cancer Centre, University Health Network, Toronto, ON M5G 1L7, Canada}
+\affil[2]{Department of Medical Biophysics, University of Toronto, Toronto, ON M5G 1L7, Canada}
+\affil[3]{Vector Institute, Toronto, ON M5G 1M1, Canada}
+\affil[
+]{\href{mailto:gregory.schwartz@uhn.ca}{email:gregory.schwartz@uhn.ca}}
+%\affil[*]{These authors contributed equally to this work}
+
+\maketitle
+
+\begin{refsegment}
+
+\begin{abstract}
+  \noindent \textbf{Motivation:} This is important.
+
+  \noindent \textbf{Results:} We present this.
+
+  \noindent \textbf{Availability:} \todo{transfer and clean up code + add to SchwartzLab Github} is freely available at \url{}.
+\end{abstract}
+
+\section*{Introduction}
+
+Order of the whole paper: Abstract, Introduction, Results, Discussion, Methods,
+Data Availability, Code Availability, Acknowledgments, Funding, Author
+Contributions, Competing Interests, Supplementary Information
+
+There is where the intro
+goes~\autocite{schwartzTooManyCellsIdentifiesVisualizes2020}. This includes a
+short literature review highlighting the gaps that your paper fills in. Ends
+with a summary of the paper.
+
+\section*{Results}
+
+\section*{Directory info}
+
+For the code, we want \texttt{main.tex} to have everything (paper and rebuttal).
+We comment out rebuttal for initial submission. Paper text is in
+\texttt{paper.tex} and rebuttal text is in \texttt{rebuttal/rebuttal.tex}.
+Figures go in the \texttt{figures} folder (both \texttt{pdf} and \texttt{svg}),
+rebuttal figures go in \texttt{rebuttal/figures}.
+
+To build the document, run \texttt{latexmk -lualatex main.pdf}.
+
+\subsection*{Figure references}
+
+Let me tell you about this amazing result
+(\Cref{fig:amazing,fig:astounding,fig:incredible,fig:anotherAmazing,fig:anotherWow,sfig:okay,sfig:maybe,sfig:alright,tab:description,stab:goodStuff}).
+
+\subsection*{Revisions}
+
+\qc{fixed}{\highLight{We also did stuff here for the revision that will appear
+    in the rebuttal. Notice how references to figures are correct
+    (\Cref{fig:astounding}).}}
+
+\subsection*{Figure style}
+
+\begin{enumerate}
+\item \textit{Make sure your figure style is consistent throughout!}
+\item We usually use 1px line width for plots (or 0.2mm, but Scientific Inkscape
+  defaults to 1px so it's easy to just use that).
+\item Nothing smaller than 8pt font, if you can't fit the text with that size in
+  the plot then make the plot bigger. For panel labels (a, b, etc.) use 12pt
+  bold lowercase.
+\item Consistent color scheme throughout. Don't mix color schemes. We usually
+  use Set1 from ColorBrewer.
+\item Use alignment, don't eyeball centering. Make sure plots and panel labels
+  are aligned as much as possible with each other.
+\item Don't use gridlines unless they are absolutely necessary
+\item Don't squish plots. It looks bad. If you have trouble resizing with too
+  much text, use \url{https://github.com/burghoff/Scientific-Inkscape}.
+  Scientific Inkscape has a \textit{lot} of very useful utilities for editing
+  scientific figures.
+\end{enumerate}
+
+\subsection*{Language}
+
+Importantly, in this section you should not write dryly. You must tell a story
+with a high-level view of the methods, more detail goes into the methods
+section. How specifically should this be written? Read other papers to see how
+they do it! Check out \textit{Nature Methods} papers. For example from us
+(figures don't match, just using as an example):
+
+\begin{quote}
+In order to understand how survival programs could be affected by the duration
+of treatment, we sought to characterize the unique expression profiles among
+persister-cell populations. We identified differentially expressed genes between
+control and persister cells of each cell line separately and aggregated the
+complete list of genes using rank product analysis
+\autocite{breitlingFEBSLetters2004}. The batch functionality of TMCI allowed us
+to efficiently visualize the distribution of top-ranking most differentially
+expressed genes across the entire data-set collection. From these
+visualizations, we identified \textit{ID2} as one of the most highly upregulated
+genes across long-term treated cells in comparison to controls (rank product: 4,
+permutation test: \(p < \SI{2.22e-16}{}\)), but not among the short-term treated
+cells (rank product: 380, permutation test: \(p < \SI{2.22e-16}{}\))
+(\Cref{fig:astounding,stab:goodStuff,sfig:okay}). Comparison of
+  \textit{ID2} expression between each control and corresponding treatment arm
+  showed a significant increase of \(\log_2\) fold change values for all cell
+  lines (Mann-Whitney \(U\) test: \(p < \SI{0.05}{}\)), regardless of treatment
+  duration, with the exception of short-term treated DND-41 cells
+  (\Cref{fig:amazing} and \Cref{stab:goodStuff}). \textit{ID2} is known to play
+  a role in tumorigenesis as a key regulator of cell-cycle progression and
+  overexpression of \textit{ID2} in cell-line experiments modulates
+  proliferative capacity and cell invasiveness \autocite{itahana_role_2003,
+    stighall_high_2005}. Differential \textit{ID2} expression in our analysis
+  suggests varying proliferative activity between treatment durations.
+\end{quote}
+
+\section*{Discussion}
+
+This section is for summarizing the paper, offering more speculative
+interpretations, and suggesting future work and impact.
+
+\section*{Methods}
+
+\subsection*{We did stuff}
+
+This is how we did it. We used \SI{15}{\micro\meter} keyboards.
+
+\section*{Data Availability}
+
+We obtained spatial transcriptomic data of human lymph node from
+\url{https://www.10xgenomics.com/datasets/human-lymph-node-1-standard-1-0-0},
+mouse hypothalamic preoptic region from
+\url{https://datadryad.org/stash/dataset/doi:10.5061/dryad.8t8s248}, LUAD from
+the Gene Expression Omnibus under accession number GSE189487, and human
+colorectal cancer (Visium HD) from
+\url{https://www.10xgenomics.com/datasets/visium-hd-cytassist-gene-expression-libraries-of-human-crc}.
+
+\section*{Code availability}
+
+\todo{XXXXXX} is available at
+\url{https://github.com/schwartzlab-methods/XXXXXXXX} or as a Singularity image
+at \url{https://cloud.sylabs.io/library/you/collection/XXXXXXXXX.sif} with a
+tutorial at \url{https://github.com/schwartzlab-methods/XXXXXX#vignette}.
+Scripts for generating the figures and plots of the manuscript can be found at
+\url{https://github.com/schwartzlab-methods/XXXXXXX_paper_figures}.
+
+\section*{Acknowledgments}
+
+We thank a lot of people.
+
+\section*{Funding}
+
+This work was supported by the University of Toronto Data Sciences Institute
+Research Software Development Support Program (G. W. S.), the Canadian Cancer
+Society Challenge Grant (grant 707484; G. W. S.), the Natural Sciences and
+Engineering Research Council of Canada (grants RGPIN-2023-04713 and
+DGECR-2023-00395; G. W. S.), the Social Sciences and Humanities Research Council
+(grant NFRFE-2022-00681; G. W. S.), the Canada Research Chairs Program (G. W.
+S.), and the Princess Margaret Cancer Foundation (G. W. S.).
+
+\section*{Authors Contributions}
+
+G. W. S. conceived and supervised the project. Y. O. U. did everything else.
+
+\section*{Competing Interests}
+
+G. W. S. conceived and supervised the project. Y. O. U. developed the XXXXXXXX
+method, software, and benchmarks. Y. O. U. ran and analyzed benchmarks. Y. O. U.
+generated experimental results. Y. O. U. ran and analyzed data. Y. O. U. and G.
+W. S. wrote and edited the manuscript. All authors reviewed the manuscript.
+
+\clearpage
+
+\end{refsegment}
+\printbibliography[segment=1]
+
+\clearpage
+
+\begin{figure}[htbp]
+\centering
+\includepdf[fitpaper=true,pages=-]{figures/figure_LUAD_CRC.pdf}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[htbp]
+  {\phantomsubcaption\label{fig:amazing}}
+  {\phantomsubcaption\label{fig:astounding}}
+  {\phantomsubcaption\label{fig:incredible}}
+  \caption{\panel{sub@fig:amazing,sub@fig:astounding,sub@fig:incredible}, Many cool things.
+    \panel{sub@fig:amazing}, This is amazing. \panel{sub@fig:astounding}, This
+    is astounding. \panel{sub@fig:incredible}, This is incredible.
+  \label{fig:incredibleOne}}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[htbp]
+\centering
+\includepdf[fitpaper=true,pages=-]{figures/figure_LUAD_CRC.pdf}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[htbp]
+  {\phantomsubcaption\label{fig:anotherAmazing}}
+  {\phantomsubcaption\label{fig:anotherWow}}
+  \caption{\panel{sub@fig:anotherAmazing}, This is also amazing.
+    \panel{sub@fig:anotherWow}, Yes indeed.
+  \label{fig:astoundingOne}}
+\end{figure}
+
+\clearpage
+
+\begin{table}
+\begin{center}
+  \caption{\label{tab:description} Great table, isn't it?}
+  \rowcolors{2}{white}{lightlightgray}
+  \begin{tabular}{ llllc }
+    \Xhline{2pt}
+    My & great & table & wow & amazing\\
+    \hline
+    Wow & 2 & 4 & 3 & 2\\
+    \Xhline{2pt}
+  \end{tabular}
+\end{center}
+\end{table}
+
+\clearpage
+
+%% Reset numbering
+\pagenumbering{arabic}
+
+\section*{Supplementary Information}
+
+\subsection*{Supplementary Notes}
+
+\subsection*{\Cref{snote:great}: Great note}\snote{snote:great}
+
+Really remarkable stuff here.
+
+\qc{otherFixInSupplemental}{\highLight{We also did stuff here for the revision
+    that will appear in the rebuttal, but in the supplemental section here, so
+    note the \texttt{qps} in the rebuttal.}}
+
+\subsection*{Supplementary Figures}
+
+\clearpage
+
+\begin{sfigure}[htbp]
+  \centering
+  \includepdf[fitpaper=true,pages=-]{supplementary/figure_LUAD_CRC.pdf}
+\end{sfigure}
+
+\clearpage
+
+\begin{sfigure}[htbp]
+  \centering
+  {\phantomsubcaption\label{sfig:okay}}
+  {\phantomsubcaption\label{sfig:maybe}}
+  {\phantomsubcaption\label{sfig:alright}}
+  \caption{\panel{sub@sfig:okay,sub@sfig:maybe}, This describes so many cool
+    things. \panel{sub@sfig:okay}, This is okay. \panel{sub@sfig:maybe}, This is
+    meh. \panel{sub@sfig:alright}, This is alright.}
+  \label{sfig:itsokay}
+\end{sfigure}
+
+\clearpage
+
+\section*{Supplementary Tables}
+
+\captionof{stab}{\label{stab:goodStuff} Here is some info.}

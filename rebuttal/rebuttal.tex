@@ -1,0 +1,71 @@
+\pagenumbering{arabic}
+
+\def\papertitle{Title of paper}
+% \def\authors{}
+% \def\journal{Some Journal}
+% \def\doi{12345}
+\input{rebuttal/custom_templates/AR_to_RC.tex}
+
+\begin{refsegment}
+
+  \AR{We thank all of the reviewers for their careful review and detailed
+    suggestions to improve the manuscript. We believe that we have successfully
+    addressed all comments raised by the referees from our initial submission.
+    The reviewers' suggestions have significantly strengthened our manuscript
+    without changing the overall story.
+
+    To address these comments, we provided X new figure panels and included
+    several new data including the following highlights:
+
+  \begin{enumerate}
+  \item Newstuff.
+  \item More new stuff.
+  \end{enumerate}
+
+ Major changes to the manuscript are highlighted in orange.
+
+}
+
+\section{Reviewer \#1}
+
+\RC \rlabel{rtxt:commentHere} I didn't like this.
+
+\AR{We appreciate the reviewer noting the potential of our work and we fixed it
+  like you said (\Cref{rfig:wow}). Here, we need to thank the reviewer for the
+  comment (although not overdo it), then say what we need to address it. We then
+  show the exact location in the text where we addressed it, along with
+  additional figures. To do this, we use custom \texttt{\textbackslash{}qc},
+  \texttt{\textbackslash{}qp}, and \texttt{\textbackslash{}qps} commands to copy
+  (\texttt{\textbackslash{}qc}) and paste (\texttt{\textbackslash{}qp} from
+  text, \texttt{\textbackslash{}qps} from supplemental). We also highlight major
+  changes with \texttt{\textbackslash{}highLight} (does not work across
+  paragraphs, just do another \texttt{\textbackslash{}highLight}) Check
+  \texttt{paper.tex} for examples.
+
+\qp{fixed}
+
+\qps{otherFixInSupplemental}
+
+\begin{rfigure}[H]
+  \centering
+  % Makebox here to actually center.
+  \makebox[\textwidth]{\includegraphics{rebuttal/figures/figure_for_rebuttal.pdf}
+  }
+  {\phantomsubcaption\label{rfig:wow}}
+  \caption{\panel{sub@rfig:wow}, Excerpt from \Cref{fig:astoundingOne}. Minimum
+    explanation to understand figure.}
+\end{rfigure}
+
+}
+
+\section{Reviewer \#2}
+
+\RC The manuscript reads very well, and the quality of the language is good.
+
+\AR{Thanks. This was noted in R\ref{rtxt:commentHere} too.}
+
+\end{refsegment}
+
+\printbibliography[segment=2]
+
+\end{document}

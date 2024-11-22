@@ -1,0 +1,6 @@
+*.log
+*.gls
+*.aux
+*.fdb_latexmk
+*.bbl
+*.cpy
