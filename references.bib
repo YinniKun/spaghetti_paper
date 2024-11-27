@@ -274,6 +274,434 @@ doi={10.1186/s13000-024-01461-w},
 url={https://doi.org/10.1186/s13000-024-01461-w}
 }
 
+@article{survival_he_1,
+author={Xu, Zhixin
+and Lim, Seohoon
+and Shin, Hong-Kyu
+and Uhm, Kwang-Hyun
+and Lu, Yucheng
+and Jung, Seung-Won
+and Ko, Sung-Jea},
+title={Risk-aware survival time prediction from whole slide pathological images},
+journal={Scientific Reports},
+year={2022},
+day={19},
+volume={12},
+number={1},
+pages={21948},
+abstract={Deep-learning-based survival prediction can assist doctors by providing additional information for diagnosis by estimating the risk or time of death. The former focuses on ranking deaths among patients based on the Cox model, whereas the latter directly predicts the survival time of each patient. However, it is observed that survival time prediction for the patients, particularly with close observation times, possibly has incorrect orders, leading to low prediction accuracy. Therefore, in this paper, we present a whole slide image (WSI)-based survival time prediction method that takes advantage of both the risk as well as time prediction. Specifically, we propose to combine these two approaches by extracting the risk prediction features and using them as guides for the survival time prediction. Considering the high resolution of WSIs, we extract tumor patches from WSIs using a pre-trained tumor classifier and apply the graph convolutional network to aggregate information across these patches effectively. Extensive experiments demonstrate that the proposed method significantly improves the time prediction accuracy when compared with direct prediction of the survival times without guidance and outperforms existing methods.},
+issn={2045-2322},
+doi={10.1038/s41598-022-26096-z},
+url={https://doi.org/10.1038/s41598-022-26096-z}
+}
+
+@article{he_pdl1,
+author={Shamai, Gil
+and Livne, Amir
+and Pol{\'o}nia, Ant{\'o}nio
+and Sabo, Edmond
+and Cretu, Alexandra
+and Bar-Sela, Gil
+and Kimmel, Ron},
+title={Deep learning-based image analysis predicts PD-L1 status from H{\&}E-stained histopathology images in breast cancer},
+journal={Nature Communications},
+year={2022},
+day={08},
+volume={13},
+number={1},
+pages={6753},
+abstract={Programmed death ligand-1 (PD-L1) has been recently adopted for breast cancer as a predictive biomarker for immunotherapies. The cost, time, and variability of PD-L1 quantification by immunohistochemistry (IHC) are a challenge. In contrast, hematoxylin and eosin (H{\&}E) is a robust staining used routinely for cancer diagnosis. Here, we show that PD-L1 expression can be predicted from H{\&}E-stained images by employing state-of-the-art deep learning techniques. With the help of two expert pathologists and a designed annotation software, we construct a dataset to assess the feasibility of PD-L1 prediction from H{\&}E in breast cancer. In a cohort of 3,376 patients, our system predicts the PD-L1 status in a high area under the curve (AUC) of 0.91 -- 0.93. Our system is validated on two external datasets, including an independent clinical trial cohort, showing consistent prediction performance. Furthermore, the proposed system predicts which cases are prone to pathologists miss-interpretation, showing it can serve as a decision support and quality assurance system in clinical practice.},
+issn={2041-1723},
+doi={10.1038/s41467-022-34275-9},
+url={https://doi.org/10.1038/s41467-022-34275-9}
+}
+
+@article{he_disease_outcome,
+author={Qaiser, Talha
+and Lee, Ching-Yi
+and Vandenberghe, Michel
+and Yeh, Joe
+and Gavrielides, Marios A.
+and Hipp, Jason
+and Scott, Marietta
+and Reischl, Joachim},
+title={Usability of deep learning and H{\&}E images predict disease outcome-emerging tool to optimize clinical trials},
+journal={npj Precision Oncology},
+year={2022},
+day={15},
+volume={6},
+number={1},
+pages={37},
+abstract={Understanding factors that impact prognosis for cancer patients have high clinical relevance for treatment decisions and monitoring of the disease outcome. Advances in artificial intelligence (AI) and digital pathology offer an exciting opportunity to capitalize on the use of whole slide images (WSIs) of hematoxylin and eosin (H{\&}E) stained tumor tissue for objective prognosis and prediction of response to targeted therapies. AI models often require hand-delineated annotations for effective training which may not be readily available for larger data sets. In this study, we investigated whether AI models can be trained without region-level annotations and solely on patient-level survival data. We present a weakly supervised survival convolutional neural network (WSS-CNN) approach equipped with a visual attention mechanism for predicting overall survival. The inclusion of visual attention provides insights into regions of the tumor microenvironment with the pathological interpretation which may improve our understanding of the disease pathomechanism. We performed this analysis on two independent, multi-center patient data sets of lung (which is publicly available data) and bladder urothelial carcinoma. We perform univariable and multivariable analysis and show that WSS-CNN features are prognostic of overall survival in both tumor indications. The presented results highlight the significance of computational pathology algorithms for predicting prognosis using H{\&}E stained images alone and underpin the use of computational methods to improve the efficiency of clinical trial studies.},
+issn={2397-768X},
+doi={10.1038/s41698-022-00275-7},
+url={https://doi.org/10.1038/s41698-022-00275-7}
+}
+
+@article{bleep,
+      title={Spatially Resolved Gene Expression Prediction from H&E Histology Images via Bi-modal Contrastive Learning}, 
+      author={Ronald Xie and Kuan Pang and Sai W. Chung and Catia T. Perciani and Sonya A. MacParland and Bo Wang and Gary D. Bader},
+      year={2023},
+      eprint={2306.01859},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2306.01859}, 
+}
+
+@misc{hest-1k,
+      title={HEST-1k: A Dataset for Spatial Transcriptomics and Histology Image Analysis}, 
+      author={Guillaume Jaume and Paul Doucet and Andrew H. Song and Ming Y. Lu and Cristina Almagro-Pérez and Sophia J. Wagner and Anurag J. Vaidya and Richard J. Chen and Drew F. K. Williamson and Ahrong Kim and Faisal Mahmood},
+      year={2024},
+      eprint={2406.16192},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2406.16192}, 
+}
+
+@article{tcga,
+author={Chang, Kyle
+and Creighton, Chad J.
+and Davis, Caleb
+and Donehower, Lawrence
+and Drummond, Jennifer
+and Wheeler, David
+and Ally, Adrian
+and Balasundaram, Miruna
+and Birol, Inanc
+and Butterfield, Yaron S. N.
+and Chu, Andy
+and Chuah, Eric
+and Chun, Hye-Jung E.
+and Dhalla, Noreen
+and Guin, Ranabir
+and Hirst, Martin
+and Hirst, Carrie
+and Holt, Robert A.
+and Jones, Steven J. M.
+and Lee, Darlene
+and Li, Haiyan I.
+and Marra, Marco A.
+and Mayo, Michael
+and Moore, Richard A.
+and Mungall, Andrew J.
+and Robertson, A. Gordon
+and Schein, Jacqueline E.
+and Sipahimalani, Payal
+and Tam, Angela
+and Thiessen, Nina
+and Varhol, Richard J.
+and Beroukhim, Rameen
+and Bhatt, Ami S.
+and Brooks, Angela N.
+and Cherniack, Andrew D.
+and Freeman, Samuel S.
+and Gabriel, Stacey B.
+and Helman, Elena
+and Jung, Joonil
+and Meyerson, Matthew
+and Ojesina, Akinyemi I.
+and Pedamallu, Chandra Sekhar
+and Saksena, Gordon
+and Schumacher, Steven E.
+and Tabak, Barbara
+and Zack, Travis
+and Lander, Eric S.
+and Bristow, Christopher A.
+and Hadjipanayis, Angela
+and Haseley, Psalm
+and Kucherlapati, Raju
+and Lee, Semin
+and Lee, Eunjung
+and Luquette, Lovelace J.
+and Mahadeshwar, Harshad S.
+and Pantazi, Angeliki
+and Parfenov, Michael
+and Park, Peter J.
+and Protopopov, Alexei
+and Ren, Xiaojia
+and Santoso, Netty
+and Seidman, Jonathan
+and Seth, Sahil
+and Song, Xingzhi
+and Tang, Jiabin
+and Xi, Ruibin
+and Xu, Andrew W.
+and Yang, Lixing
+and Zeng, Dong
+and Auman, J. Todd
+and Balu, Saianand
+and Buda, Elizabeth
+and Fan, Cheng
+and Hoadley, Katherine A.
+and Jones, Corbin D.
+and Meng, Shaowu
+and Mieczkowski, Piotr A.
+and Parker, Joel S.
+and Perou, Charles M.
+and Roach, Jeffrey
+and Shi, Yan
+and Silva, Grace O.
+and Tan, Donghui
+and Veluvolu, Umadevi
+and Waring, Scot
+and Wilkerson, Matthew D.
+and Wu, Junyuan
+and Zhao, Wei
+and Bodenheimer, Tom
+and Hayes, D. Neil
+and Hoyle, Alan P.
+and Jeffreys, Stuart R.
+and Mose, Lisle E.
+and Simons, Janae V.
+and Soloway, Mathew G.
+and Baylin, Stephen B.
+and Berman, Benjamin P.
+and Bootwalla, Moiz S.
+and Danilova, Ludmila
+and Herman, James G.
+and Hinoue, Toshinori
+and Laird, Peter W.
+and Rhie, Suhn K.
+and Shen, Hui
+and Triche, Timothy
+and Weisenberger, Daniel J.
+and Carter, Scott L.
+and Cibulskis, Kristian
+and Chin, Lynda
+and Zhang, Jianhua
+and Getz, Gad
+and Sougnez, Carrie
+and Wang, Min
+and Dinh, Huyen
+and Doddapaneni, Harsha Vardhan
+and Gibbs, Richard
+and Gunaratne, Preethi
+and Han, Yi
+and Kalra, Divya
+and Kovar, Christie
+and Lewis, Lora
+and Morgan, Margaret
+and Morton, Donna
+and Muzny, Donna
+and Reid, Jeffrey
+and Xi, Liu
+and Cho, Juok
+and DiCara, Daniel
+and Frazer, Scott
+and Gehlenborg, Nils
+and Heiman, David I.
+and Kim, Jaegil
+and Lawrence, Michael S.
+and Lin, Pei
+and Liu, Yingchun
+and Noble, Michael S.
+and Stojanov, Petar
+and Voet, Doug
+and Zhang, Hailei
+and Zou, Lihua
+and Stewart, Chip
+and Bernard, Brady
+and Bressler, Ryan
+and Eakin, Andrea
+and Iype, Lisa
+and Knijnenburg, Theo
+and Kramer, Roger
+and Kreisberg, Richard
+and Leinonen, Kalle
+and Lin, Jake
+and Liu, Yuexin
+and Miller, Michael
+and Reynolds, Sheila M.
+and Rovira, Hector
+and Shmulevich, Ilya
+and Thorsson, Vesteinn
+and Yang, Da
+and Zhang, Wei
+and Amin, Samirkumar
+and Wu, Chang-Jiun
+and Wu, Chia-Chin
+and Akbani, Rehan
+and Aldape, Kenneth
+and Baggerly, Keith A.
+and Broom, Bradley
+and Casasent, Tod D.
+and Cleland, James
+and Creighton, Chad
+and Dodda, Deepti
+and Edgerton, Mary
+and Han, Leng
+and Herbrich, Shelley M.
+and Ju, Zhenlin
+and Kim, Hoon
+and Lerner, Seth
+and Li, Jun
+and Liang, Han
+and Liu, Wenbin
+and Lorenzi, Philip L.
+and Lu, Yiling
+and Melott, James
+and Mills, Gordon B.
+and Nguyen, Lam
+and Su, Xiaoping
+and Verhaak, Roeland
+and Wang, Wenyi
+and Weinstein, John N.
+and Wong, Andrew
+and Yang, Yang
+and Yao, Jun
+and Yao, Rong
+and Yoshihara, Kosuke
+and Yuan, Yuan
+and Yung, Alfred K.
+and Zhang, Nianxiang
+and Zheng, Siyuan
+and Ryan, Michael
+and Kane, David W.
+and Aksoy, B. Arman
+and Ciriello, Giovanni
+and Dresdner, Gideon
+and Gao, Jianjiong
+and Gross, Benjamin
+and Jacobsen, Anders
+and Kahles, Andre
+and Ladanyi, Marc
+and Lee, William
+and Lehmann, Kjong-Van
+and Miller, Martin L.
+and Ramirez, Ricardo
+and R{\"a}tsch, Gunnar
+and Reva, Boris
+and Sander, Chris
+and Schultz, Nikolaus
+and Senbabaoglu, Yasin
+and Shen, Ronglai
+and Sinha, Rileen
+and Sumer, S. Onur
+and Sun, Yichao
+and Taylor, Barry S.
+and Weinhold, Nils
+and Fei, Suzanne
+and Spellman, Paul
+and Benz, Christopher
+and Carlin, Daniel
+and Cline, Melisssa
+and Craft, Brian
+and Ellrott, Kyle
+and Goldman, Mary
+and Haussler, David
+and Ma, Singer
+and Ng, Sam
+and Paull, Evan
+and Radenbaugh, Amie
+and Salama, Sofie
+and Sokolov, Artem
+and Stuart, Joshua M.
+and Swatloski, Teresa
+and Uzunangelov, Vladislav
+and Waltman, Peter
+and Yau, Christina
+and Zhu, Jing
+and Hamilton, Stanley R.
+and Abbott, Scott
+and Abbott, Rachel
+and Dees, Nathan D.
+and Delehaunty, Kim
+and Ding, Li
+and Dooling, David J.
+and Eldred, Jim M.
+and Fronick, Catrina C.
+and Fulton, Robert
+and Fulton, Lucinda L.
+and Kalicki-Veizer, Joelle
+and Kanchi, Krishna-Latha
+and Kandoth, Cyriac
+and Koboldt, Daniel C.
+and Larson, David E.
+and Ley, Timothy J.
+and Lin, Ling
+and Lu, Charles
+and Magrini, Vincent J.
+and Mardis, Elaine R.
+and McLellan, Michael D.
+and McMichael, Joshua F.
+and Miller, Christopher A.
+and O'Laughlin, Michelle
+and Pohl, Craig
+and Schmidt, Heather
+and Smith, Scott M.
+and Walker, Jason
+and Wallis, John W.
+and Wendl, Michael C.
+and Wilson, Richard K.
+and Wylie, Todd
+and Zhang, Qunyuan
+and Burton, Robert
+and Jensen, Mark A.
+and Kahn, Ari
+and Pihl, Todd
+and Pot, David
+and Wan, Yunhu
+and Levine, Douglas A.
+and Black, Aaron D.
+and Bowen, Jay
+and Network, The Cancer Genome Atlas Research
+and Center, Genome Characterization
+and Center, Genome Data Analysis
+and Center, Sequencing
+and Center, Data Coordinating
+and Site, Tissue Source
+and Center, Biospecimen Core Resource},
+title={The Cancer Genome Atlas Pan-Cancer analysis project},
+journal={Nature Genetics},
+year={2013},
+day={01},
+volume={45},
+number={10},
+pages={1113-1120},
+abstract={Current clinical practice is organized according to tissue or organ of origin of tumors. Now, The Cancer Genome Atlas (TCGA) Research Network has started to identify genomic and other molecular commonalities among a dozen different types of cancer. Emerging similarities and contrasts will form the basis for targeted therapies of the future and for repurposing existing therapies by molecular rather than histological similarities of the diseases.},
+issn={1546-1718},
+doi={10.1038/ng.2764},
+url={https://doi.org/10.1038/ng.2764}
+}
+
+@article{cyclegan_he,
+author={Runz, Marlen
+and Rusche, Daniel
+and Schmidt, Stefan
+and Weihrauch, Martin R.
+and Hesser, J{\"u}rgen
+and Weis, Cleo-Aron},
+title={Normalization of HE-stained histological images using cycle consistent generative adversarial networks},
+journal={Diagnostic Pathology},
+year={2021},
+day={06},
+volume={16},
+number={1},
+pages={71},
+abstract={Histological images show strong variance (e.g. illumination, color, staining quality) due to differences in image acquisition, tissue processing, staining, etc. This can impede downstream image analysis such as staining intensity evaluation or classification. Methods to reduce these variances are called image normalization techniques.},
+issn={1746-1596},
+doi={10.1186/s13000-021-01126-y},
+url={https://doi.org/10.1186/s13000-021-01126-y}
+}
+
+@article{cyclegan_he_2,
+      title={Standardized CycleGAN training for unsupervised stain adaptation in invasive carcinoma classification for breast histopathology}, 
+      author={Nicolas Nerrienet and Rémy Peyret and Marie Sockeel and Stéphane Sockeel},
+      year={2024},
+      eprint={2301.13128},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2301.13128}, 
+}
+
+
+
+
+
+
+
+
+
 
 
 
